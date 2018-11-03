@@ -1,0 +1,15 @@
+{
+  "name": "indexer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "indexer.js",
+  "author": "Christian Ackman",
+  "license": "ISC",
+  "dependencies": {
+    "faker": "^4.1.0",
+    "minimist": "^1.2.0",
+    "solr-node": "^1.0.14",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}

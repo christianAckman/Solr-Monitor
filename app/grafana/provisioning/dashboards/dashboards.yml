@@ -1,0 +1,11 @@
+# http://docs.grafana.org/administration/provisioning/#dashboards
+apiVersion: 1
+
+providers:
+- name: 'solr'
+  orgId: 1
+  folder: 'solr'
+  type: file
+  disableDeletion: false
+  options:
+    path: /etc/grafana/provisioning/dashboards/solr

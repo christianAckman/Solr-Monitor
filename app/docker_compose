@@ -1,0 +1,17 @@
+#!/bin/bash
+
+declare -r COMPOSE_FILE="/vagrant/app/docker-compose.yml"
+declare -r COMPOSE_DIR="/vagrant/app/"
+
+function docker_compose(){
+    echo ${FUNCNAME[0]}
+    ( cd ${COMPOSE_DIR} || return
+        docker-compose --file ${COMPOSE_FILE} $@
+    )
+}
+
+function main(){
+    docker_compose $@
+}
+
+main $@
