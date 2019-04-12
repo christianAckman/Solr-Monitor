@@ -1,5 +1,3 @@
-## St4ck
-- **Apache Solr**
-- **Prometheus & Grafana**
-- **Ubuntu 16.04**
-#
+**Apache Solr Monitoring with Prometheus & Grafana**
+
+**Ubuntu 16.04 - 4GB**
