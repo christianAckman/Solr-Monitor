@@ -96,7 +96,8 @@ function generatePerson(){
         'jobtitle': faker.name.jobTitle(),
         'jobdescription': faker.name.jobDescriptor(),
         'phonenumber': faker.phone.phoneNumber('###-###-####'),
-        'email': faker.internet.email(this.firstname, this.lastname)
+        'email': faker.internet.email(this.firstname, this.lastname),
+        'text': faker.lorem.paragraphs(1)
     }
 }
 

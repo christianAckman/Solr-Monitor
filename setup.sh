@@ -42,12 +42,25 @@ function main(){
     wait_and_run_indexer
 }
 
+function get_solr_permissions(){
+
+    local -r SOLR_USER=8983
+    local -r SOLR_CONFIG_DIR="/vagrant/app/solr/config"
+    chown "${SOLR_USER}":"${SOLR_USER}" "${SOLR_CONFIG_DIR}"
+    chmod 700 "${SOLR_CONFIG_DIR}"
+
+    # groupadd -g "${SOLR_USER}"
+
+    sudo chown -R 8983:8983 /vagrant/app/solr/config/population/data
+    sudo chmod 700 /vagrant/app/solr/config/test
+}
+
 
 function start_containers(){
     echo ${FUNCNAME[0]}
 
     ( cd /usr/local/bin/ || return
-        docker-compose --file ${COMPOSE_FILE} up -d  --no-deps --build solr prometheus grafana
+        docker-compose --file ${COMPOSE_FILE} up -d  --no-deps --build solr #prometheus grafana angular-app
     )
 }
 

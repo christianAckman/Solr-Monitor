@@ -10,6 +10,9 @@ services:
     ports:
       - 8983:8983
       - 9983:9983
+    #https://github.com/docker-solr/docker-solr/issues/118
+    volumes:
+      - /vagrant/app/solr/config/:/opt/solr/server/solr/mycores/:rw
     env_file:
       - /vagrant/app/solr/solr.env
     networks:
